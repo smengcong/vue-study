@@ -1,0 +1,23 @@
+<html>
+    <title>test</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in items">
+                {{index}}-{{item.message}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var vm1 = new Vue({
+            el:'#app',
+            data:{
+                items:[
+                    {message:'yjl'},
+                    {message:'zs'},
+                    {message:'dz'}
+                ]
+            }
+        })
+    </script>
+</html>
