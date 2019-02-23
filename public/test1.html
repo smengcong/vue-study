@@ -3,7 +3,7 @@
     <script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
     <div id="app">
         <ul>
-            <li v-for="(item,index) in items">
+            <li v-for="(item,index) in items" v-if="item.isShow">
                 {{index}}-{{item.message}}
             </li>
         </ul>
@@ -13,9 +13,9 @@
             el:'#app',
             data:{
                 items:[
-                    {message:'单走一个'},
-                    {message:'6'},
-                    {message:'傻逼'}
+                    {message:'smc',isShow:true},
+                    {message:'dizai',isShow:false},
+                    {message:'zhousi',isShow:true}
                 ]
             }
         })
