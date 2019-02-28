@@ -1,0 +1,22 @@
+<html>
+    <title>test</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
+    <div id="app">
+        <button v-on:click="greet('greet')">greet</button>
+        <input v-on:keyup.enter="greet(event,'12312')" />
+    </div>
+    <script>
+        var vm1 = new Vue({
+            el:'#app',
+            data:{
+                name:'vue.js'
+            },
+            methods:{
+                greet:function(e,message){
+                    debugger;
+                    alert(e.target.value);
+                }
+            }
+        })
+    </script>
+</html>
