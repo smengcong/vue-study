@@ -3,8 +3,8 @@
     <script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
     <div id="app">
         <ul>
-            <li v-for="(item,index) in items">
-                {{index}}-{{item.message}}
+            <li v-for="(item,index) in evenNumbers">
+                {{index}}-{{item}}
             </li>
         </ul>
     </div>
@@ -12,11 +12,14 @@
         var vm1 = new Vue({
             el:'#app',
             data:{
-                items:[
-                    {message:'单走一个'},
-                    {message:'6'},
-                    {message:'傻逼'}
-                ]
+                numbers:[1,2,3,4]
+            },
+            computed: {
+                evenNumbers:function(){
+                    return this.numbers.filters(function(number){
+                        return number%2===0
+                    })
+                }
             }
         })
     </script>
